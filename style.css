@@ -1,0 +1,200 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Felső fejléc és menü */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 5%;
+    background-color: #333;
+    color: white;
+}
+
+.logo-placeholder {
+    width: 100px;
+}
+
+.site-header nav {
+    margin-left: auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Főcím a fejléc alatt */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ddd;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+/* Article és aside egymás mellett */
+.content-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 0;
+}
+
+.main-content {
+    flex: 3;
+    min-width: 0;
+}
+
+.main-content h2,
+aside h2 {
+    margin-bottom: 20px;
+}
+
+/* Kártyák */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 250px;
+    min-width: 0;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #ccc;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 160px;
+    background-color: #ddd;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0077cc;
+}
+
+/* Oldalsáv */
+aside {
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    background-color: #e5e5e5;
+    border-radius: 8px;
+}
+
+.aside-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.aside-box h3 {
+    margin-bottom: 10px;
+}
+
+/* Lábléc */
+footer {
+    width: 100%;
+    padding: 25px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+/*űrap*/
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Kisebb képernyő */
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo-placeholder {
+        display: none;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .main-content,
+    aside {
+        width: 100%;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+}
